@@ -7,7 +7,7 @@
     <style>
         :root {
             --bg-color: #070b19;
-            --card-bg: rgba(16, 24, 48, 0.75);
+            --card-bg: rgba(16, 24, 48, 0.85);
             --border-color: rgba(0, 242, 254, 0.3);
             --primary-glow: #00f2fe;
             --secondary-glow: #4facfe;
@@ -18,7 +18,7 @@
 
         body.linebet-theme {
             --bg-color: #05190f;
-            --card-bg: rgba(10, 35, 22, 0.8);
+            --card-bg: rgba(10, 35, 22, 0.9);
             --border-color: rgba(46, 213, 115, 0.4);
             --primary-glow: #2ed573;
             --secondary-glow: #7bed9f;
@@ -44,7 +44,6 @@
             transition: background 1s ease;
         }
 
-        /* Qor effekti */
         .snowflake {
             position: absolute;
             background: #ffffff;
@@ -57,7 +56,6 @@
             100% { transform: translateY(105vh) translateX(20px); opacity: 0.2; }
         }
 
-        /* Fon landshaft elementlari */
         .scenery-bg {
             position: fixed;
             top: 0;
@@ -73,7 +71,7 @@
             width: 100%;
             max-width: 440px;
             min-height: 100vh;
-            background: rgba(7, 11, 25, 0.85);
+            background: rgba(7, 11, 25, 0.9);
             backdrop-filter: blur(15px);
             display: flex;
             flex-direction: column;
@@ -89,7 +87,7 @@
             flex-direction: column;
             padding: 20px;
             overflow-y: auto;
-            animation: fadeIn 0.4s ease;
+            animation: fadeIn 0.3s ease;
         }
 
         .screen.active {
@@ -101,7 +99,6 @@
             to { opacity: 1; transform: scale(1); }
         }
 
-        /* Auth Screen Design */
         .auth-wrapper {
             margin: auto 0;
             background: var(--card-bg);
@@ -124,13 +121,13 @@
 
         .auth-dev {
             font-size: 11px;
-            color: #00f2fe;
+            color: var(--primary-glow);
             background: rgba(0, 242, 254, 0.1);
             padding: 4px 12px;
             border-radius: 20px;
             display: inline-block;
             margin-bottom: 25px;
-            border: 1px solid rgba(0, 242, 254, 0.3);
+            border: 1px solid var(--border-color);
         }
 
         .promo-box {
@@ -161,7 +158,6 @@
             font-weight: bold;
             cursor: pointer;
             font-size: 12px;
-            transition: 0.2s;
         }
         .copy-btn:active { transform: scale(0.95); }
 
@@ -179,12 +175,10 @@
             color: #fff;
             font-size: 15px;
             outline: none;
-            transition: 0.3s;
         }
 
         .input-group input:focus {
             border-color: var(--primary-glow);
-            box-shadow: 0 0 10px rgba(0, 242, 254, 0.2);
         }
 
         .platforms-label {
@@ -209,7 +203,6 @@
             color: #fff;
             font-weight: bold;
             cursor: pointer;
-            transition: 0.3s;
             text-align: center;
             font-size: 14px;
         }
@@ -217,7 +210,6 @@
         .platform-btn.active {
             border-color: var(--primary-glow);
             background: linear-gradient(135deg, rgba(0, 242, 254, 0.2), rgba(79, 172, 254, 0.2));
-            box-shadow: 0 0 15px rgba(0, 242, 254, 0.3);
         }
 
         .login-btn {
@@ -230,7 +222,6 @@
             font-size: 16px;
             font-weight: bold;
             cursor: pointer;
-            transition: 0.3s;
             box-shadow: 0 5px 20px rgba(0, 242, 254, 0.4);
         }
 
@@ -247,7 +238,6 @@
             display: none;
         }
 
-        /* Main Dashboard Design */
         .top-bar {
             display: flex;
             justify-content: space-between;
@@ -272,7 +262,6 @@
             display: flex;
             align-items: center;
             gap: 8px;
-            position: relative;
         }
 
         .badge-status {
@@ -285,7 +274,6 @@
             font-weight: 600;
         }
 
-        /* Chiqish tugmasi (Sariq doira o'rnidagi maxsus tugma) */
         .logout-btn {
             width: 32px;
             height: 32px;
@@ -298,9 +286,7 @@
             cursor: pointer;
             color: var(--accent-red);
             font-size: 14px;
-            transition: 0.2s;
         }
-        .logout-btn:active { transform: scale(0.9); }
 
         .vip-card {
             background: var(--card-bg);
@@ -332,6 +318,7 @@
             font-size: 12px;
             font-weight: bold;
             border: 1px solid var(--border-color);
+            cursor: pointer;
         }
 
         .section-title {
@@ -355,15 +342,8 @@
             border-radius: 16px;
             padding: 14px;
             cursor: pointer;
-            transition: 0.3s;
             position: relative;
             overflow: hidden;
-        }
-
-        .game-card:hover {
-            border-color: var(--primary-glow);
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
         }
 
         .game-icon {
@@ -394,7 +374,6 @@
             font-weight: bold;
         }
 
-        /* Aviator Big Banner */
         .aviator-banner {
             background: linear-gradient(135deg, rgba(255, 61, 113, 0.15), rgba(20, 20, 40, 0.8));
             border: 1px solid rgba(255, 61, 113, 0.3);
@@ -427,10 +406,7 @@
             font-weight: bold;
             font-size: 13px;
             cursor: pointer;
-            box-shadow: 0 4px 15px rgba(255, 61, 113, 0.4);
-            transition: 0.2s;
         }
-        .signal-btn:active { transform: scale(0.97); }
 
         .footer-links {
             display: grid;
@@ -454,11 +430,8 @@
             align-items: center;
             justify-content: center;
             gap: 6px;
-            transition: 0.2s;
         }
-        .bot-footer-btn:hover { background: rgba(255,255,255,0.1); }
 
-        /* Game Detail Screens (Apple, Wild West, Kamikaze, etc.) */
         .back-nav {
             display: flex;
             justify-content: space-between;
@@ -491,7 +464,6 @@
             align-items: center;
         }
 
-        /* Apple of Fortune & Wild West & Kamikaze specific styles */
         .apple-grid {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
@@ -510,43 +482,11 @@
             align-items: center;
             justify-content: center;
             font-size: 16px;
-            transition: 0.3s;
         }
 
         .apple-cell.active-safe {
             background: rgba(0, 230, 118, 0.25);
             border-color: var(--accent-green);
-            box-shadow: 0 0 10px rgba(0, 230, 118, 0.4);
-        }
-
-        .apple-cell.active-danger {
-            background: rgba(255, 61, 113, 0.25);
-            border-color: var(--accent-red);
-        }
-
-        .multiplier-sidebar {
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-            justify-content: center;
-            margin-right: 10px;
-        }
-
-        .mult-tag {
-            font-size: 10px;
-            padding: 4px 8px;
-            background: rgba(0,242,254,0.1);
-            border: 1px solid var(--border-color);
-            border-radius: 6px;
-            color: var(--primary-glow);
-            font-weight: bold;
-        }
-
-        .game-flex-row {
-            display: flex;
-            width: 100%;
-            justify-content: center;
-            align-items: center;
         }
 
         .action-main-btn {
@@ -559,10 +499,8 @@
             font-weight: bold;
             font-size: 15px;
             cursor: pointer;
-            box-shadow: 0 5px 20px rgba(0,242,254,0.3);
         }
 
-        /* Modal / Alerts */
         .modal-overlay {
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
@@ -611,7 +549,6 @@
 </head>
 <body>
 
-    <!-- Fon qor va landshaft effekti uchun -->
     <div class="scenery-bg" id="sceneryBg"></div>
 
     <div class="container">
@@ -656,7 +593,6 @@
                 </div>
                 <div class="top-right-group">
                     <div class="badge-status">Online</div>
-                    <!-- Chiqish tugmasi (Sariq doira o'rnidagi maxsus tugma) -->
                     <div class="logout-btn" onclick="logoutToAuth()" title="Chiqish">➔</div>
                 </div>
             </div>
@@ -666,7 +602,7 @@
                     <h4 id="vipCardTitle">COLDBET VIP</h4>
                     <p id="vipCardId">ID: 1856707487</p>
                 </div>
-                <div class="vip-badge" id="vipStatusBadge" onclick="showActivationModal()" style="cursor: pointer;">FAOL ℹ️</div>
+                <div class="vip-badge" id="vipStatusBadge" onclick="showActivationModal()">FAOL ℹ️</div>
             </div>
 
             <div class="section-title">Mavjud Signal O'yinlari (7 ta)</div>
@@ -730,19 +666,16 @@
                 <div style="width: 50px;"></div>
             </div>
 
-            <div class="game-arena" id="gameArenaContent">
-                <!-- Dinamik o'yin maydoni -->
-            </div>
+            <div class="game-arena" id="gameArenaContent"></div>
 
             <button class="action-main-btn" id="gameActionBtn" onclick="triggerSignal()">SIGNAL OLISH ⚡</button>
         </div>
     </div>
 
-    <!-- Tizimni faollashtirish haqida modal -->
     <div class="modal-overlay" id="activationModal">
         <div class="modal-card">
             <h3 id="modalPlatformName">TIZIMNI FAOL'LASHTIRISH</h3>
-            <p id="modalPromoText">Ilovani yuklab olib, <b>MUZZ</b> promokodi orqali yangi account oching va hisobingizni kamida 60.000 so'mga to'ldiring.<br><br>Shunda algoritmlar 100% aniq ishlaydi!</p>
+            <p id="modalPromoText">Ilovani yuklab olib, promokod orqali hisobingizni to'ldiring.</p>
             <button class="modal-btn" onclick="closeActivationModal()">Tushundim</button>
         </div>
     </div>
@@ -751,10 +684,9 @@
         let currentPlatform = 'coldbet';
         let activeGameType = '';
 
-        // Qor yog'ish effektini yaratish
         function createSnow() {
             const container = document.getElementById('sceneryBg');
-            for(let i=0; i<35; i++) {
+            for(let i=0; i<30; i++) {
                 const snow = document.createElement('div');
                 snow.classList.add('snowflake');
                 snow.style.left = Math.random() * 100 + 'vw';
@@ -770,7 +702,6 @@
         }
         createSnow();
 
-        // Platforma tanlash
         function selectPlatform(platform) {
             currentPlatform = platform;
             document.getElementById('btnColdbet').classList.remove('active');
@@ -778,7 +709,6 @@
 
             if(platform === 'coldbet') {
                 document.getElementById('btnColdbet').classList.add('active');
-                document.getElementById('promoCodeDisplayinnerText = "MUZZ"');
                 document.getElementById('promoCodeDisplay').innerText = 'MUZZ';
                 document.getElementById('keyInput').value = 'MUZZ';
                 document.body.classList.remove('linebet-theme');
@@ -790,21 +720,19 @@
             }
         }
 
-        // Har 1 daqiqada Linebet tanlanganda quyoshli va oyli manzara almashinuvi
         setInterval(() => {
             if(currentPlatform === 'linebet') {
                 const bg = document.getElementById('sceneryBg');
                 if(bg.style.background.includes('radial-gradient')) {
-                    bg.style.background = 'linear-gradient(135deg, #052b18 0%, #021008 100%)'; // Oyli tungi quyoshli effekt
+                    bg.style.background = 'linear-gradient(135deg, #052b18 0%, #021008 100%)';
                 } else {
-                    bg.style.background = 'radial-gradient(circle at top, #1a4d2e 0%, #05190f 100%)'; // Quyoshli yorug'
+                    bg.style.background = 'radial-gradient(circle at top, #1a4d2e 0%, #05190f 100%)';
                 }
             } else {
-                document.getElementById('sceneryBg.style.background = ""';
+                document.getElementById('sceneryBg').style.background = '';
             }
         }, 60000);
 
-        // Kirish tugmasi
         function handleLogin() {
             const idVal = document.getElementById('userIdInput').value.trim();
             const keyVal = document.getElementById('keyInput').value.trim();
@@ -829,7 +757,6 @@
                 document.getElementById('authScreen').classList.remove('active');
                 document.getElementById('dashboardScreen').classList.add('active');
                 
-                // Dashboard malumotlari
                 if(currentPlatform === 'coldbet') {
                     document.getElementById('dashTitle').innerText = 'COLDBEHACK';
                     document.getElementById('vipCardTitle').innerText = 'COLDBET VIP';
@@ -843,12 +770,10 @@
             }
         }
 
-        // Logout - ID yozib kiradigan joyga qaytish
         function logoutToAuth() {
             document.getElementById('dashboardScreen').classList.remove('active');
             document.getElementById('gameScreen').classList.remove('active');
             document.getElementById('authScreen').classList.add('active');
-            document.getElementById('userIdInput').value = '';
         }
 
         function copyPromo() {
@@ -859,11 +784,11 @@
 
         function showActivationModal() {
             if(currentPlatform === 'coldbet') {
-                document.getElementById('modalPlatformName').innerText = 'COLDBET TIZIMINI FAOL-SHTIRISH';
-                document.getElementById('modalPromoText').innerHTML = 'Coldbet ilovasini yuklab olib, <b>MUZZ</b> promokodi orqali yangi account oching va hisobingizni kamida 60.000 so\'mga to\'ldiring.<br><br>Shunda COLDBET-HACK algoritmi 100% aniq ishlaydi!';
+                document.getElementById('modalPlatformName').innerText = 'COLDBET TIZIMINI FAOLLASHTIRISH';
+                document.getElementById('modalPromoText').innerHTML = 'Coldbet ilovasini yuklab olib, <b>MUZZ</b> promokodi orqali yangi account oching va hisobingizni kamida 60.000 so\'mga to\'ldiring.';
             } else {
-                document.getElementById('modalPlatformName').innerText = 'LINEBET TIZIMINI FAOL-SHTIRISH';
-                document.getElementById('modalPromoText').innerHTML = 'Linebet ilovasini yuklab olib, <b>BE127</b> promokodi orqali yangi account oching va hisobingizni kamida 60.000 so\'mga to\'ldiring.<br><br>Shunda BE127-HACK algoritmi 100% aniq ishlaydi!';
+                document.getElementById('modalPlatformName').innerText = 'LINEBET TIZIMINI FAOLLASHTIRISH';
+                document.getElementById('modalPromoText').innerHTML = 'Linebet ilovasini yuklab olib, <b>BE127</b> promokodi orqali yangi account oching va hisobingizni kamida 60.000 so\'mga to\'ldiring.';
             }
             document.getElementById('activationModal').style.display = 'flex';
         }
@@ -872,7 +797,6 @@
             document.getElementById('activationModal').style.display = 'none';
         }
 
-        // O'yin ekranini ochish
         function openGame(gameType) {
             activeGameType = gameType;
             document.getElementById('dashboardScreen').classList.remove('active');
@@ -900,27 +824,12 @@
             const arena = document.getElementById('gameArenaContent');
             arena.innerHTML = '';
 
-            if(activeGameType === 'apple') {
-                let html = '<div style="font-size:12px; color:#aaa; margin-bottom:10px;">Olma joylashgan xavfsiz yo\'lni toping</div>';
+            if(activeGameType === 'apple' || activeGameType === 'wildwest' || activeGameType === 'kamikaze') {
+                let icon = activeGameType === 'apple' ? '🍎' : (activeGameType === 'wildwest' ? '🤠' : '✈️');
+                let html = '<div style="font-size:12px; color:#aaa; margin-bottom:10px;">Xavfsiz yo\'lni aniqlash paneli</div>';
                 html += '<div class="apple-grid">';
                 for(let i=0; i<25; i++) {
-                    html += `<div class="apple-cell" id="ac_${i}">🍎</div>`;
-                }
-                html += '</div>';
-                arena.innerHTML = html;
-            } else if(activeGameType === 'wildwest') {
-                let html = '<div style="font-size:12px; color:#aaa; margin-bottom:10px;">Oltin sandiqlarni ochish tartibi</div>';
-                html += '<div class="apple-grid" style="grid-template-columns: repeat(3, 1fr);">';
-                for(let i=0; i<18; i++) {
-                    html += `<div class="apple-cell" id="ww_${i}">🤠</div>`;
-                }
-                html += '</div>';
-                arena.innerHTML = html;
-            } else if(activeGameType === 'kamikaze') {
-                let html = '<div style="font-size:12px; color:#aaa; margin-bottom:10px;">Xavfsiz uchish yo\'nalishi</div>';
-                html += '<div class="apple-grid" style="grid-template-columns: repeat(5, 1fr);"> ';
-                for(let i=0; i<25; i++) {
-                    html += `<div class="apple-cell" id="km_${i}">✈️</div>`;
+                    html += `<div class="apple-cell" id="ac_${i}">${icon}</div>`;
                 }
                 html += '</div>';
                 arena.innerHTML = html;
@@ -930,30 +839,14 @@
         }
 
         function triggerSignal() {
-            if(activeGameType === 'apple') {
+            if(activeGameType === 'apple' || activeGameType === 'wildwest' || activeGameType === 'kamikaze') {
                 for(let i=0; i<25; i++) {
                     let cell = document.getElementById(`ac_${i}`);
                     if(cell) {
-                        cell.classList.remove('active-safe', 'active-danger');
-                        if(Math.random() > 0.6) {
+                        cell.classList.remove('active-safe');
+                        if(Math.random() > 0.5) {
                             cell.classList.add('active-safe');
                         }
-                    }
-                }
-            } else if(activeGameType === 'wildwest') {
-                for(let i=0; i<18; i++) {
-                    let cell = document.getElementById(`ww_${i}`);
-                    if(cell) {
-                        cell.classList.remove('active-safe');
-                        if(Math.random() > 0.5) cell.classList.add('active-safe');
-                    }
-                }
-            } else if(activeGameType === 'kamikaze') {
-                for(let i=0; i<25; i++) {
-                    let cell = document.getElementById(`km_${i}`);
-                    if(cell) {
-                        cell.classList.remove('active-safe');
-                        if(Math.random() > 0.55) cell.classList.add('active-safe');
                     }
                 }
             } else {
